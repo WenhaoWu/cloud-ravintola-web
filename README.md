@@ -1,10 +1,23 @@
+# Dynamic module implementation
+https://blog.angularindepth.com/dynamically-loading-components-with-angular-cli-92a3c69bcd28
+
 # CloudRavintola
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
 
+## Prerequisites
+- install `npm` version >= 3
+- install `node` version >= 6
+- install angular-cli: `npm install -g @angular/cli`
+- install typescript compiler: `npm install -g typescript`
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
++ clone this repo
++ cd into dashboard app `cd buddy-dashboard`
++ install npm packages `npm i`
++ run local dev server `ng serve --env=local`
++ navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
