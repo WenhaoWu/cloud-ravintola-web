@@ -12,6 +12,11 @@ const manifests: DynamicComponentManifest[] = [
     path: 'test-shell', // some globally-unique identifier, used internally by the router
     loadChildren: './dynamic-modules/test-resturant/test-resturant.module#TestResturantModule',
   },
+  {
+    componentId: 'client-shell',
+    path: 'client-shell', // 
+    loadChildren: './dynamic-modules/client/client.module#ClientModule',
+  },
 ];
 
 @NgModule({

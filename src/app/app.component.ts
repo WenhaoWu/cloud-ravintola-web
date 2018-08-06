@@ -1,7 +1,8 @@
 import { Component, ViewChild, ViewContainerRef, OnInit } from '@angular/core';
 
 import { DynamicComponentLoader } from './dynamic-component-loader/dynamic-component-loader.service';
-import { HomeComponent } from './dynamic-modules/test-resturant/home/home.component';
+import { ShellComponent as testShell} from './dynamic-modules/test-resturant/shell/shell.component';
+import { ShellComponent as clientShell} from './dynamic-modules/client/shell/shell.component';
 
 @Component({
   selector: 'app-root',
@@ -21,11 +22,11 @@ export class AppComponent implements OnInit {
 
     let factory$;
 
-    if (host === 'localhost'){
-      factory$ = this.dynamicComponentLoader.getComponentFactory<HomeComponent>('test-resturant-shell');
+    if (host !== 'localhost'){
+      factory$ = this.dynamicComponentLoader.getComponentFactory<clientShell>('client-shell');
     }
     else {
-      factory$ = this.dynamicComponentLoader.getComponentFactory<HomeComponent>('test-resturant-shell');
+      factory$ = this.dynamicComponentLoader.getComponentFactory<testShell>('test-resturant-shell');
     }
 
     console.log(host)
