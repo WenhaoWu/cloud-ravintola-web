@@ -3,6 +3,11 @@ https://blog.angularindepth.com/dynamically-loading-components-with-angular-cli-
 
 # CloudRavintola
 
+Concept:
+
+![Concept](https://i.imgur.com/AXwjpGt.png "Concept of project")
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
 
 ## Prerequisites
