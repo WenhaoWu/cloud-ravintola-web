@@ -8,8 +8,15 @@ import {
     DynamicComponentManifest
 } from './dynamic-component-loader/dynamic-component-loader.module';
 
+
 // This array defines which "componentId" maps to which lazy-loaded module.
 const manifests: DynamicComponentManifest[] = [
+    {
+        componentId:"client-2",
+        path:'client-2-shell',
+        loadChildren:'./dynamic-modules/client-2/client-2.module#Client2Module'
+
+    },
     {
         componentId: 'test-resturant-shell',
         path: 'test-shell', // some globally-unique identifier, used internally by the router

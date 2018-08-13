@@ -3,6 +3,8 @@ import { Component, ViewChild, ViewContainerRef, OnInit } from '@angular/core';
 import { DynamicComponentLoader } from './dynamic-component-loader/dynamic-component-loader.service';
 import { ShellComponent as testShell } from './dynamic-modules/test-resturant/shell/shell.component';
 import { ShellComponent as clientShell } from './dynamic-modules/client/shell/shell.component';
+import { ShellComponent as client2shell} from './dynamic-modules/client-2/shell/shell.component';
+
 
 @Component({
     selector: 'app-root',
@@ -24,8 +26,8 @@ export class AppComponent implements OnInit {
                 'client-shell'
             );
         } else {
-            factory$ = this.dynamicComponentLoader.getComponentFactory<testShell>(
-                'test-resturant-shell'
+            factory$ = this.dynamicComponentLoader.getComponentFactory<client2shell>(
+                'client-2'
             );
         }
 
