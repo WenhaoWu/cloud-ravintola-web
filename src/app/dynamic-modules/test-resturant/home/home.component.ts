@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '../../../../../node_modules/@angular/router';
-import { TestResturantRoutingModule, TestRoutes } from '../test-resturant-routing.module';
+import { TestRoutes } from '../test-resturant-routing.module';
 
 @Component({
   selector: 'app-home',
