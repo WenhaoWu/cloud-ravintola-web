@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '../../../../../node_modules/@angular/router';
+import { ClientRoutes } from '../fu-man-lou-routing.module';
 
 @Component({
   selector: 'app-shell',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShellComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit() {
+    this.router.navigate([`${ClientRoutes.home}`]);
   }
 
 }

@@ -1,14 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from '../client/home/home.component';
-
-const routes: Routes = [];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class FuManLouRoutingModule { }
+import { HomeComponent } from './home/home.component';
 
 export const enum ClientRoutes {
   home = "home",
@@ -28,3 +20,10 @@ const routes: Routes = [
     redirectTo:ClientRoutes.home
   }
 ];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class FuManLouRoutingModule { }
+

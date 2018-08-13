@@ -27,6 +27,11 @@ const manifests: DynamicComponentManifest[] = [
         componentId: 'client-shell',
         path: 'client-shell', //
         loadChildren: './dynamic-modules/client/client.module#ClientModule'
+    },
+    {
+        componentId: 'fu-man-lou',
+        path: 'fumanlou-shell',
+        loadChildren: './dynamic-modules/fu-man-lou/fu-man-lou.module#FuManLouModule'
     }
 ];
 

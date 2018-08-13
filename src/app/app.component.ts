@@ -4,6 +4,7 @@ import { DynamicComponentLoader } from './dynamic-component-loader/dynamic-compo
 import { ShellComponent as testShell } from './dynamic-modules/test-resturant/shell/shell.component';
 import { ShellComponent as clientShell } from './dynamic-modules/client/shell/shell.component';
 import { ShellComponent as client2shell} from './dynamic-modules/client-2/shell/shell.component';
+import { ShellComponent as fumanlou } from './dynamic-modules/fu-man-lou/shell/shell.component';
 
 
 @Component({
@@ -26,8 +27,8 @@ export class AppComponent implements OnInit {
                 'client-shell'
             );
         } else {
-            factory$ = this.dynamicComponentLoader.getComponentFactory<client2shell>(
-                'client-2'
+            factory$ = this.dynamicComponentLoader.getComponentFactory<fumanlou>(
+                'fu-man-lou'
             );
         }
 
