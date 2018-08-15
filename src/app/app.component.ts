@@ -3,8 +3,7 @@ import { Component, ViewChild, ViewContainerRef, OnInit } from '@angular/core';
 import { DynamicComponentLoader } from './dynamic-component-loader/dynamic-component-loader.service';
 import { ShellComponent as testShell } from './dynamic-modules/test-resturant/shell/shell.component';
 import { ShellComponent as clientShell } from './dynamic-modules/client/shell/shell.component';
-import { ShellComponent as client2shell} from './dynamic-modules/client-2/shell/shell.component';
-import { ShellComponent as fumanlou } from './dynamic-modules/fu-man-lou/shell/shell.component';
+import { ShellComponent as fumanlouShell } from './dynamic-modules/fu-man-lou/shell/shell.component';
 
 
 @Component({
@@ -23,8 +22,8 @@ export class AppComponent implements OnInit {
         let factory$;
 
         if (host === 'localhost') {
-            factory$ = this.dynamicComponentLoader.getComponentFactory<clientShell>(
-                'client-shell'
+            factory$ = this.dynamicComponentLoader.getComponentFactory<fumanlouShell>(
+                'fu-man-lou'
             );
         } else {
             factory$ = this.dynamicComponentLoader.getComponentFactory<testShell>(
