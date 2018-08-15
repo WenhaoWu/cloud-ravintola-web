@@ -22,13 +22,13 @@ export class AppComponent implements OnInit {
 
         let factory$;
 
-        if (host !== 'localhost') {
+        if (host === 'localhost') {
             factory$ = this.dynamicComponentLoader.getComponentFactory<clientShell>(
                 'client-shell'
             );
         } else {
-            factory$ = this.dynamicComponentLoader.getComponentFactory<fumanlou>(
-                'fu-man-lou'
+            factory$ = this.dynamicComponentLoader.getComponentFactory<testShell>(
+                'test-resturant-shell'
             );
         }
 
